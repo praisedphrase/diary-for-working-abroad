@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BEAC4A90631AB96B7D0FE5EBE7159BE6F76CC175",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BEAC4A90631AB96B7D0FE5EBE7159BE6F76CC175" : 9223372036854775807,
+    "D1C60938BBB152D3EC5D4ABB9E54BA7B34AAAF1A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5044E0E3-63EB-4265-87A1-68E39BE042EE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BEAC4A90631AB96B7D0FE5EBE7159BE6F76CC175" : "diary-for-working-abroad\/",
+    "D1C60938BBB152D3EC5D4ABB9E54BA7B34AAAF1A" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Diary",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Diary\/Diary\/Diary.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/praisedphrase\/diary-for-working-abroad.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BEAC4A90631AB96B7D0FE5EBE7159BE6F76CC175"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/praisedphrase\/coding-for-ios-developer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D1C60938BBB152D3EC5D4ABB9E54BA7B34AAAF1A"
+    }
+  ]
+}
