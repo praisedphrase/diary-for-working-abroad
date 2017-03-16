@@ -71,7 +71,9 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         //cell.cellImage.image = UIImage(named: "swift.jpeg")
         // Configure the cell...
         let article = controller.object(at: indexPath)
-        cell.cellLabel.text = article.title
+//        cell.cellLabel.text = article.title
+        cell.textLabel?.text = article.title
+        
         
         return cell
     }
@@ -86,6 +88,7 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
             sectionNameKeyPath: nil, cacheName: nil
             )
         self.controller = controller
+        self.controller.delegate = self
         
         do {
             try controller.performFetch()
@@ -95,6 +98,40 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         }
     }
 
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch (type) {
+        case .insert:
+            if let indexPath = newIndexPath{
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break
+        case .delete:
+            if let indexPath = indexPath{
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+//        case .update:
+//            if let indexPath = newIndexPath{
+//                tableView.updateConstraints()
+//            }
+        default:
+            break
+        }
+        
+//      ==  if type == NSFetchedResultsChangeType.insert {
+//            if let indexPath = newIndexPath{
+//                tableView.insertRows(at: [indexPath], with: .fade)
+//            }
+//        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -144,8 +181,9 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
 //            detailViewController.titleText = contentList[indexPath!]["title"]
 //            detailViewController.contentText = contentList[indexPath!]["content"]
             let article = controller.object(at: tableView.indexPathForSelectedRow!)
-            detailViewController.titleText = article.title
-            detailViewController.contentText = article.content
+//            detailViewController.titleText = article.title
+//            detailViewController.contentText = article.content
+            detailViewController.article = article
             
         }
     }
